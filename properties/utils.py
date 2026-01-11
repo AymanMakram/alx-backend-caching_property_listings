@@ -6,7 +6,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 def get_all_properties():
-    """Low-level caching for Property queryset."""
+    """Low-level caching for Property queryset"""
     cache_key = 'all_properties'
     queryset = cache.get(cache_key)
 
@@ -16,7 +16,7 @@ def get_all_properties():
     return queryset
 
 def get_redis_cache_metrics():
-    """Retrieve and analyze Redis cache hit/miss metrics."""
+    """Retrieve and analyze Redis cache hit/miss metrics"""
     try:
         con = get_redis_connection("default")
         info = con.info()
