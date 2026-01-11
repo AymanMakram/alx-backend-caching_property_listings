@@ -1,0 +1,4 @@
+django
+django-redis
+psycopg2-binary
+redis
