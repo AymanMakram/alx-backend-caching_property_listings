@@ -5,5 +5,5 @@ from .models import Property
 
 @receiver([post_save, post_delete], sender=Property)
 def invalidate_property_cache(sender, instance, **kwargs):
-    # This must match the key used in utils.get_all_properties
+    # This must match the key used in utils.get_all_properties 
     cache.delete('all_properties')
